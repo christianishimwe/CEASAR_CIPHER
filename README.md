@@ -1,1 +1,14 @@
 # CEASAR_CIPHER
+
+# CAESER-_-SECURE-MESSAGE-ENCRYPTION-AND-DECRYPTION
+This project models a system of securely encrypting and decrypting message over secure networks using the art of Cryptography.
+
+Cryptography is the study of secure communications and secret codes. It helps you, say, send a secret message across enemy lines, knowing that even if the message is intercepted, it could not be read. People have been using ciphers (encrypted messages) for thousands of years, but only in the last century have computers come into the field. One of the oldest ways to hide a message is to use a substitution cipher. One classic example of a substitution cipher is the Caesar cipher, named after the first recorded (and most famous) user, Julius Caesar. If you’d like to learn more about the Caesar cipher, you can check out the wikipedia page to read about its history and usage.
+
+The Caesar cipher is a basic encryption technique where all letters in a message are shifted down the alphabet by a certain number (determined by the key). In order to encrypt or decrypt a message, you will need a secret key that should, in practice, be hard to find if you don’t already know it. In the Caesar cipher, the key is the number of places to shift each character. This number could be specified numerically (e.g., 4) or it could be specified as a character (e.g., ‘E’ – which is 4 places over from ‘A’). For simplicity, we typically convert the entire message to uppercase, and may omit punctuation.
+
+For instance, consider the message (and famous Julius Caesar quote): “CAESAR’S WIFE MUST BE ABOVE SUSPICION” and the key “E”, which says to change each letter in the message to the letter four places to the right in the alphabet. For example, ‘C’ becomes ‘G’, ‘A’ becomes ‘E’, etc. Note the letter ‘W’ in “WIFE”, when shifted four down, goes beyond ‘Z’. This is handled by wrapping back to the front of the alphabet, and so ‘W’ becomes ‘A’.
+
+The project can do three things. It can encrypt any message by shifting letter in the text with a secret key, decrypt a message when the secret key is known, and also crack (decrypt) a decrypted message without knowing the secret key used.
+
+The message will be stored in files, let's say maybe encrypted_message.txt (encryped message) and message_txt(original message) which will be read by the program. To encrypt the message stored in message.txt with a key of ‘G’, you would call java Caesar encrypt message.txt G. To decrypt the message stored in encrypted_message.txt with a key of ‘G’, you would call java Caesar decrypt encrypted_message.txt G. To crack the message stored in encrypted_message.txt, you would call java Caesar crack encrypted_message.txt english.txt. encrypted_message and message.txt are not files that we provide. You mat construct them on your own.
